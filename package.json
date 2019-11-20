@@ -1,0 +1,18 @@
+{
+  "name": "alice-protocol",
+  "version": "1.0.0",
+  "description": "JSON schemas of Alice skills request/response format",
+  "author": {
+    "name": "Vitaliy Potapov",
+    "email": "noginsk@rambler.ru"
+  },
+  "scripts": {
+    "build": "node scripts/build",
+    "release": "npm version minor && npm publish && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitalets/alice-protocol.git"
+  },
+  "license": "MIT"
+}
