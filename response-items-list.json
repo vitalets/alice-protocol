@@ -1,0 +1,116 @@
+{
+  "response": {
+    "$required": true,
+    "text": {
+      "$type": "string",
+      "$required": true,
+      "$maxLength": 1024
+    },
+    "tts": {
+      "$type": "string",
+      "$maxLength": 1024
+    },
+    "buttons": [
+      {
+        "text": {
+          "$type": "string",
+          "$maxLength": 64
+        },
+        "url": {
+          "$type": "string",
+          "$maxLength": 1024
+        },
+        "payload": {
+          "$type": "object"
+        },
+        "hide": {
+          "$type": "boolean"
+        }
+      }
+    ],
+    "end_session": {
+      "$type": "boolean",
+      "$required": true
+    },
+    "card": {
+      "type": "ItemsList",
+      "header": {
+        "text": {
+          "$type": "string",
+          "$maxLength": 64
+        }
+      },
+      "items": {
+        "$type": "array",
+        "$item": {
+          "image_id": {
+            "$type": "string"
+          },
+          "title": {
+            "$type": "string",
+            "$maxLength": 128
+          },
+          "description": {
+            "$type": "string",
+            "$maxLength": 256
+          },
+          "button": {
+            "text": {
+              "$type": "string",
+              "$maxLength": 64
+            },
+            "url": {
+              "$type": "string",
+              "$maxLength": 1024
+            },
+            "payload": {
+              "$type": "object"
+            }
+          }
+        },
+        "$maxLength": 5
+      },
+      "footer": {
+        "text": {
+          "$type": "string",
+          "$maxLength": 64
+        },
+        "button": {
+          "text": {
+            "$type": "string",
+            "$maxLength": 64
+          },
+          "url": {
+            "$type": "string",
+            "$maxLength": 1024
+          },
+          "payload": {
+            "$type": "object"
+          }
+        }
+      }
+    }
+  },
+  "session": {
+    "$required": true,
+    "user_id": {
+      "$type": "string",
+      "$required": true
+    },
+    "session_id": {
+      "$type": "string",
+      "$required": true
+    },
+    "message_id": {
+      "$type": "number",
+      "$required": true
+    },
+    "new": {
+      "$type": "boolean"
+    }
+  },
+  "version": {
+    "$type": "string",
+    "$required": true
+  }
+}
