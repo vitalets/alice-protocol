@@ -12,16 +12,17 @@
     },
     "buttons": [
       {
-        "text": {
+        "title": {
           "$type": "string",
+          "$required": true,
           "$maxLength": 64
+        },
+        "payload": {
+          "$type": "object"
         },
         "url": {
           "$type": "string",
           "$maxLength": 1024
-        },
-        "payload": {
-          "$type": "object"
         },
         "hide": {
           "$type": "boolean"

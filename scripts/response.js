@@ -38,14 +38,23 @@ const response = () => ({
     $type: 'string',
     $maxLength: 1024
   },
-  buttons: [
-    {
-      ...button(),
-      hide: {
-        $type: 'boolean',
-      }
+  buttons: [{
+    title: {
+      $type: 'string',
+      $required: true,
+      $maxLength: 64
+    },
+    payload: {
+      $type: 'object'
+    },
+    url: {
+      $type: 'string',
+      $maxLength: 1024
+    },
+    hide: {
+      $type: 'boolean',
     }
-  ],
+  }],
   end_session: {
     $type: 'boolean',
     $required: true,
@@ -99,11 +108,11 @@ const itemsList = () => ({
       $type: 'string',
       $maxLength: 64
     },
-    button: button()
+    button: imageButton()
   },
 });
 
-const button = () => ({
+const imageButton = () => ({
   text: {
     $type: 'string',
     $maxLength: 64
@@ -129,7 +138,7 @@ const image = () => ({
     $type: 'string',
     $maxLength: 256
   },
-  button: button()
+  button: imageButton()
 });
 
 module.exports = {
