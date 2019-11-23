@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "node scripts/build",
-    "release": "npm version minor && npm publish && git push --tags"
+    "release": "npm version minor && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",
