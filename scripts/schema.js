@@ -100,6 +100,7 @@ const itemsList = () => ({
   },
   items: {
     $type: 'array',
+    $required: true,
     $item: image(),
     $maxLength: 5
   },
@@ -129,6 +130,7 @@ const imageButton = () => ({
 const image = () => ({
   image_id: {
     $type: 'string',
+    $required: true,
   },
   title: {
     $type: 'string',

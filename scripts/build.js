@@ -5,12 +5,12 @@
  * node scripts/build
  */
 const fs = require('fs');
-const response = require('./response');
+const schema = require('./schema');
 
 const files = [
-  {filename: 'response-no-image.json', schema: response.noImageSchema},
-  {filename: 'response-big-image.json', schema: response.bigImageSchema},
-  {filename: 'response-items-list.json', schema: response.itemsListSchema},
+  {filename: 'response-no-image.json', schema: schema.noImageSchema},
+  {filename: 'response-big-image.json', schema: schema.bigImageSchema},
+  {filename: 'response-items-list.json', schema: schema.itemsListSchema},
 ];
 
 main();

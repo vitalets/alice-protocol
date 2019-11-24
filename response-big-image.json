@@ -36,7 +36,8 @@
     "card": {
       "type": "BigImage",
       "image_id": {
-        "$type": "string"
+        "$type": "string",
+        "$required": true
       },
       "title": {
         "$type": "string",
