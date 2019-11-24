@@ -1,6 +1,6 @@
 {
   "name": "alice-protocol",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "JSON schemas of Alice skills request/response format",
   "author": {
     "name": "Vitaliy Potapov",
