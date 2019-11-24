@@ -95,6 +95,7 @@ const itemsList = () => ({
   header: {
     text: {
       $type: 'string',
+      $required: true,
       $maxLength: 64
     }
   },
