@@ -34,24 +34,6 @@
       "$required": true
     }
   },
-  "session": {
-    "$required": true,
-    "user_id": {
-      "$type": "string",
-      "$required": true
-    },
-    "session_id": {
-      "$type": "string",
-      "$required": true
-    },
-    "message_id": {
-      "$type": "number",
-      "$required": true
-    },
-    "new": {
-      "$type": "boolean"
-    }
-  },
   "version": {
     "$type": "string",
     "$required": true

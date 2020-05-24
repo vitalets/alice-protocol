@@ -5,7 +5,6 @@
 
 const noImageSchema = () => ({
   response: response(),
-  session: session(),
   version: version(),
 });
 
@@ -14,7 +13,6 @@ const bigImageSchema = () => ({
     ...response(),
     card: bigImage()
   },
-  session: session(),
   version: version(),
 });
 
@@ -23,7 +21,6 @@ const itemsListSchema = () => ({
     ...response(),
     card: itemsList()
   },
-  session: session(),
   version: version(),
 });
 
@@ -59,25 +56,6 @@ const response = () => ({
     $type: 'boolean',
     $required: true,
   },
-});
-
-const session = () => ({
-  $required: true,
-  user_id: {
-    $type: 'string',
-    $required: true,
-  },
-  session_id: {
-    $type: 'string',
-    $required: true,
-  },
-  message_id: {
-    $type: 'number',
-    $required: true,
-  },
-  new: {
-    $type: 'boolean',
-  }
 });
 
 const version = () => ({
