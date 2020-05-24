@@ -95,6 +95,14 @@
       }
     }
   },
+  "session_state": {
+    "$type": "object",
+    "$required": false
+  },
+  "user_state_update": {
+    "$type": "object",
+    "$required": false
+  },
   "version": {
     "$type": "string",
     "$required": true

@@ -5,6 +5,8 @@
 
 const noImageSchema = () => ({
   response: response(),
+  session_state: optionalObject(),
+  user_state_update: optionalObject(),
   version: version(),
 });
 
@@ -13,6 +15,8 @@ const bigImageSchema = () => ({
     ...response(),
     card: bigImage()
   },
+  session_state: optionalObject(),
+  user_state_update: optionalObject(),
   version: version(),
 });
 
@@ -21,6 +25,8 @@ const itemsListSchema = () => ({
     ...response(),
     card: itemsList()
   },
+  session_state: optionalObject(),
+  user_state_update: optionalObject(),
   version: version(),
 });
 
@@ -56,6 +62,11 @@ const response = () => ({
     $type: 'boolean',
     $required: true,
   },
+});
+
+const optionalObject = () => ({
+  $type: 'object',
+  $required: false,
 });
 
 const version = () => ({
